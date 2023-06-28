@@ -1,0 +1,137 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    font-size: 62.5%;
+    --ff-dmSans: 'DM Sans', sans-serif;
+    --ff-montserrat: 'Montserrat', sans-serif;
+    --ff-ticket: 'Dancing Script', cursive;
+    --fc-primary: #34355B;
+    --bc-screen1: linear-gradient(45deg, #510361 0%, #B0F 100%);
+    --bc-screen2: linear-gradient(45deg, #190361 0%, #B0F 100%);
+}
+
+.hide{
+    display: none;
+}
+
+body{
+    background: var(--bc-screen1);
+    font-size: 1.6rem;
+
+    display: grid;
+    place-items: center;
+    height: 100vh;
+
+    text-align: center;
+    color: var(--fc-primary);
+}
+
+.screenColorTwo{
+    background: var(--bc-screen2);
+}
+
+main{
+    background: #FFFFFF;
+    margin-top: -1.2rem;
+    border-radius: .5rem;
+    box-shadow: 0 2rem 5rem 0 rgba(0, 0, 0, 0.80);
+
+ 
+    width: min(42.8rem, 90%);
+    padding: 48px 64px 64px 64px;
+       
+}
+
+h1{
+    font-size: 2.7rem;
+    font-family: var(--ff-montserrat);
+}
+
+p{
+    margin-top: 1.4rem;
+    margin-bottom: 2rem;
+    
+    font-size: 2.0rem;
+    font-family: var(--ff-dmSans);
+}
+
+.screen2 h1, img, .ticket{
+    margin-bottom: 1.5rem;
+}
+
+.ticket{
+    background: #E4EDF1;
+    box-shadow: 2px 2px 2px 0px rgba(85, 85, 85, 0.50);
+    padding: .5rem;
+    border-radius: .4rem;
+}
+
+.ticket p{
+    font-family: var(--ff-ticket);
+    font-size: 2.4rem;
+    color: #000000;    
+}
+
+button{
+    background: #FF9500;
+    border: none;
+    border-radius: .4rem;
+    padding: 1.6rem;
+    color: #FFFFFF;
+    font-size: 1.5rem;
+    font-family: var(--ff-dmSans);
+    font-weight: 700;
+
+    width: 17.4rem;
+    height: 5.2rem;
+
+    transition: background .3s;
+}
+button:hover{
+    background: #ce831b;
+}
+
+/*ANIMAÇÃO SCREEN1 */
+.screen1 img:hover {
+    animation: shake 0.5s;
+    animation-iteration-count: infinite;
+  }
+  
+  @keyframes shake {
+    0% {margin-left: 0;}
+    25% {margin-left: .5rem;}
+    50% {margin-left: 0;}
+    75% {margin-left: -.5rem;}
+    100% {margin-left: 0;}
+  }
+
+/*ANIMAÇÃO SCREEN2 */
+.ticket{
+    animation: ticketMove 1.5s;
+    animation-iteration-count: 1;
+  }
+
+  @keyframes ticketMove {
+    from {
+        transform: translateY(20rem) scale(0.1);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+      }
+  }
+
+  .screen2 img {
+    animation: shake2 0.2s;
+  }
+  
+  @keyframes shake2 {
+    0% {margin-left: 0;}
+    25% {margin-left: .5rem;}
+    50% {margin-left: 0;}
+    75% {margin-left: -.5rem;}
+    100% {margin-left: 0;}
+  }
